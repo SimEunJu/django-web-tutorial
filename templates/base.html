@@ -3,8 +3,8 @@
   <head>
     <title>{%block title%}Django Web Programming{%endblock%}</title>
 
-    {%load staticfiles%}
-    <link rel='stylesheet' type='text/css' href='{% static css/base.css %}' />
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{%static 'css/base.css'%}" />
     <link rel='stylesheet' type='text/css' href='{%block extrastyle%}{%endblock%}' />
   </head>
 
@@ -23,26 +23,26 @@
       <li><a href="#">Blog</a></li>
       <li><a href="#">Photo</a></li>
 
-      <li><a href="#">Add&bigtriangledown;</a></li>
+      <li><a href="#">Add&bigtriangledown;</a>
         <ul>
           <li><a href="#">Bookmark</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Photo</a></li>
         </ul>
+      </li>
 
-      <li>
-        <li><a href="#">Change&bigtriangledown;</a></li>
-          <ul>
-            <li><a href="#">Bookmark</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Photo</a></li>
-          </ul>
-        </li>
+      <li><a href="#">Change&bigtriangledown;</a>
+        <ul>
+          <li><a href="#">Bookmark</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Photo</a></li>
+        </ul>
+      </li>
     </div>
 
     {%block content%}{%endblock%}
 
-    {%block footer%}{%endfooter%}
+    {%block footer%}{%endblock%}
 
   </body>
 </html>
